@@ -9,7 +9,7 @@ def main():
     word = getw(wlist)
     play(word)
     while input("Want to play again? (Y/N) ").upper() == "Y":
-        word = getw(wist)
+        word = getw(wlist)
         play(word)
 
 
