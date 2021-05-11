@@ -37,7 +37,7 @@ def play(word):
         guess = input("\t\tGuess a letter or word(🔤): ").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessedl:
-                print("You've already tried", guess, "!")
+                print("\n\t\tYou've already tried", guess, "!")
             elif guess not in word:
                 print("\n\t\t", guess, "isn't in the word ❌")
                 ntries -= 1
@@ -45,6 +45,7 @@ def play(word):
                 guessedl.append(guess)
             else:
                 print("\n\t\tNice one,", guess, "is in the word! ✅")
+                print("\n\t\tNo. of tries left => ", ntries)
                 guessedl.append(guess)
                 word_as_list = list(word_completion)
                 replacement = [i for i, letter in enumerate(
